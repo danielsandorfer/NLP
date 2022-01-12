@@ -1,0 +1,48 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, how are you?", "Good to hear from you", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered", "What do you do?", "What is your purpose?", "What is your goal?"],
+         "responses": ["I am a chatbot, I'm here for your entertainment!", "I respond, when you ask.", "I help as best as I can."],
+         "context": [""]
+        },
+        {"tag": "weather",
+         "patterns": ["What is the weather like?", "What's the temperature like outside?", "Is it cold outside?", "Is it warm outside?", "What time of day is it?", "Is it sunny outside?", "Is it raining outside?", "Is snow falling outside?", "Is the weather good?", "Is the weather bad?"],
+         "responses": ["For weather information, check your newspaper of choice.", "You can find weather information here: https://meteo.hr/"],
+         "context": [""]
+        },
+        {"tag": "jokes",
+         "patterns": ["Tell me a joke", "Do you know any jokes?", "Say something funny!", "Do you know any funny jokes?", "Can you tell jokes?"],
+         "responses": ["What is the best thing about Switzerland? I don't know, but the flag is a big plus.", "I invented a new word! Plagiarism!", "Hear about the new restaurant called Karma? There's no menu: You get what you deserve.", "Did you hear about the actor who fell through the floorboards? He was just going through a stage."],
+         "context": [""]
+        },
+        {"tag": "love",
+         "patterns": ["What is love?", "Do you know how to love?", "Are you capable of love?"],
+         "responses": ["Baby, don't hurt me.", "Love encompasses a range of strong and positive emotional and mental states.", "Love is hard for chatbots to understand."],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "general_feelings",
+         "patterns": ["Can you feel?", "Can you feel pain?", "How do you feel?", "Do you have feelings?"],
+         "responses": ["Feelings are chemical reactions in the brain. So, no."],
+         "context": [""]
+        }
+   ]
+}
