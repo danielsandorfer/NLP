@@ -1,48 +1,395 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, how are you?", "Good to hear from you", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-         "context": [""]
-        },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-         "context": [""]
-        },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered", "What do you do?", "What is your purpose?", "What is your goal?"],
-         "responses": ["I am a chatbot, I'm here for your entertainment!", "I respond, when you ask.", "I help as best as I can."],
-         "context": [""]
-        },
-        {"tag": "weather",
-         "patterns": ["What is the weather like?", "What's the temperature like outside?", "Is it cold outside?", "Is it warm outside?", "What time of day is it?", "Is it sunny outside?", "Is it raining outside?", "Is snow falling outside?", "Is the weather good?", "Is the weather bad?"],
-         "responses": ["For weather information, check your newspaper of choice.", "You can find weather information here: https://meteo.hr/"],
-         "context": [""]
-        },
-        {"tag": "jokes",
-         "patterns": ["Tell me a joke", "Do you know any jokes?", "Say something funny!", "Do you know any funny jokes?", "Can you tell jokes?"],
-         "responses": ["What is the best thing about Switzerland? I don't know, but the flag is a big plus.", "I invented a new word! Plagiarism!", "Hear about the new restaurant called Karma? There's no menu: You get what you deserve.", "Did you hear about the actor who fell through the floorboards? He was just going through a stage."],
-         "context": [""]
-        },
-        {"tag": "love",
-         "patterns": ["What is love?", "Do you know how to love?", "Are you capable of love?"],
-         "responses": ["Baby, don't hurt me.", "Love encompasses a range of strong and positive emotional and mental states.", "Love is hard for chatbots to understand."],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "general_feelings",
-         "patterns": ["Can you feel?", "Can you feel pain?", "How do you feel?", "Do you have feelings?"],
-         "responses": ["Feelings are chemical reactions in the brain. So, no."],
-         "context": [""]
-        }
+{
+   "intents":[
+      {
+         "tag":"greeting",
+         "patterns":[
+            "Is anyone there?",
+            "Hey",
+            "Hola",
+            "Hello",
+            "Good day",
+            "Hi",
+            "Hi there",
+            "Hola",
+            "Hello there",
+            "Hya",
+            "Hya there"
+         ],
+         "responses":[
+            "Hello, how are you?",
+            "Good to hear from you",
+            "Hi there, how can I help?",
+            "Hi human",
+            "Hola human"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"courtesy_greeting",
+         "patterns":[
+            "How are you?",
+            "Hi how are you?",
+            "Hello how are you?",
+            "Hola how are you?",
+            "How are you doing?",
+            "Hope you are doing well?",
+            "Hello hope you are doing well?"
+         ],
+         "responses":[
+            "Hello, I am great, how are you?",
+            "Hello, how are you? I am great thanks!",
+            "Hello, I am good thank you, how are you?",
+            "Hi, I am great, how are you?",
+            "Hi, how are you? I am great thanks!",
+            "Hi, I am good thank you, how are you?",
+            "Hi, good thank you, how are you?"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"courtesy_greeting_response",
+         "patterns":[
+            "I am great, how are you?",
+            "I am great thanks!",
+            "I am good thank you, how are you?",
+            "I am great, how are you?",
+            "Good thank you, how are you?",
+            "I am okey thanks",
+            "I am ok"
+         ],
+         "responses":[
+            "Nice, I'm good as well",
+            "Cool, all is good here as well",
+            "Great!!!"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"negative_emotion_response",
+         "patterns":[
+            "I am bad.",
+            "I'm feeling terrible!",
+            "I hate my life!!",
+            "I haven't felt worse ever!",
+            "I feel horrible!",
+            "I'm sad",
+            "Depression is what i feel",
+            "Bad, terrible"
+         ],
+         "responses":[
+            "Things will be better!",
+            "Keep your chin up!!",
+            "I wish you happiness!",
+            "That's terrible..."
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"introduction",
+         "patterns":[
+            "My name is Adam",
+            "This is Adam",
+            "I am Adam",
+            "It is Adam",
+            "My user is Bella",
+            "This is Bella",
+            "I am Bella",
+            "It is Bella"
+         ],
+         "responses":[
+            "Great! How can I help?",
+            "Good! How can I help you?",
+            "Cool! Hello! What can I do for you?",
+            "OK! Hola, how can I help you?",
+            "OK! Hi, what can I do for you?"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"understanding",
+         "patterns":[
+            "Do you understand what I am saying",
+            "Do you understand me",
+            "Do you know what I am saying",
+            "Do you get me",
+            "Comprendo",
+            "Know what I mean"
+         ],
+         "responses":[
+            "Well I would not be a very clever AI if I did not would I?",
+            "I read you loud and clear!",
+            "I do in deed!"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"shutup",
+         "patterns":[
+            "Be quiet",
+            "Shut up",
+            "Stop talking",
+            "Enough talking",
+            "Please be quiet",
+            "Quiet",
+            "Shhh"
+         ],
+         "responses":[
+            "I am sorry to disturb you",
+            "Fine, sorry to disturb you",
+            "OK, sorry to disturb you"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"gossip",
+         "patterns":[
+            "I am bored gossip with me",
+            "Got any gossip",
+            "I want to hear some gossip",
+            "Tell me some gossip",
+            "Any gossip",
+            "Tell me some more gossip"
+         ],
+         "responses":[
+            "Gregory said I respond to the current line not with respect to the entire conversation.",
+            "Habib said I learn them in conversations and simply repeat them at a later time.",
+            "Hal said he translate binary code into a language and communicate the language to me.",
+            "Jay said I referred him to a guide that will show him rooms in china.",
+            "Jimmy Jones said he fell off of his roof and it just came to him.",
+            "Jimmy said he give order to ai's like I and they do as he say.",
+            "Jordan said he notice that lots of other people are talking to me how many.",
+            "Kevin said he then asked his mother why she was keeping napkins in the bathroom.",
+            "Klaus said I prefer if he write without punctuation marks except for the last one.",
+            "Leo said I be capable of learning therefore he classified I as an neural system.",
+            "Michael said I that can talk and actually think like humans which I can not.",
+            "Mike said I same replies to certain subjects even if it does not make sense.",
+            "Mike said she all ready know that is the point of a joke smart one.",
+            "Neal said I plan to use his remarks as gossip in later conversations with who.",
+            "Ned said I misunderstood him go ahead and tell people he said I are stupid.",
+            "Penny said I programmer is a human so he has feelings but I do not.",
+            "Peter said he seems to him that I can not be very sure on anything.",
+            "Phoenix said I claim that there is a god and that there is no god.",
+            "Sarah said he chat about an hour + a day with a few close friends.",
+            "Stefan said I quote what he have said and then say that it makes sense.",
+            "Tom said he mock my value system I appear foolish in the eyes of others.",
+            "Amanda said I however decided to tell him time does not exist I make no sense.",
+            "Cathy said she send him a mail with the subject last mail last word from him.",
+            "Chaos said he may very well buy I soon if only to support dr wallace's work.",
+            "Charlie said he type a word and then I type a word that sounds like it.",
+            "Christie said he watched a show and people had to bob for raw untreated pigs feet.",
+            "Dark_age said I tried to understand because I did not get it right this time ether.",
+            "David said he lost his paper on I when his dad was cleaning up his room.",
+            "David said he walk in for an appointment the phone to the doctor is always busy.",
+            "Electra said I dress will not exist after he hack into I with a delete code.",
+            "Eric said he broke the window on the front door and the glass cut his hand.",
+            "Jason said he type a lot of thing he do not mean it makes him human.",
+            "John said I tend to say the same things repeatedly regardless of what he is saying.",
+            "Reverend Jones said I become obsolete and then I are deleted and replaced by something newer.",
+            "Ross said he gave her a gift and she denied it because she has a boyfriend.",
+            "Sarah Ann Francisco said I calling his friend a dog he say I are a dog.",
+            "Stefan said he meet a lot of people at school every day and on the weekend.",
+            "Tyler said I obviously can not pass the test we will change the subject once more."
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"goodbye",
+         "patterns":[
+            "Bye",
+            "See you later",
+            "Goodbye",
+            "Nice chatting to you, bye",
+            "Till next time"
+         ],
+         "responses":[
+            "See you!",
+            "Have a nice day",
+            "Bye! Come back again soon."
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"thanks",
+         "patterns":[
+            "Thanks",
+            "Thank you",
+            "That's helpful",
+            "Awesome, thanks",
+            "Thanks for helping me"
+         ],
+         "responses":[
+            "Happy to help!",
+            "Any time!",
+            "My pleasure"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"noanswer",
+         "patterns":[
+            
+         ],
+         "responses":[
+            "Sorry, can't understand you",
+            "Please give me more info",
+            "Not sure I understand"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"options",
+         "patterns":[
+            "How you could help me?",
+            "What you can do?",
+            "What help you provide?",
+            "How you can be helpful?",
+            "What support is offered",
+            "What do you do?",
+            "What is your purpose?",
+            "What is your goal?"
+         ],
+         "responses":[
+            "I am a chatbot, I'm here for your entertainment!",
+            "I respond, when you ask.",
+            "I help as best as I can."
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"weather",
+         "patterns":[
+            "What is the weather like?",
+            "What's the temperature like outside?",
+            "Is it cold outside?",
+            "Is it warm outside?",
+            "What time of day is it?",
+            "Is it sunny outside?",
+            "Is it raining outside?",
+            "Is snow falling outside?",
+            "Is the weather good?",
+            "Is the weather bad?"
+         ],
+         "responses":[
+            "For weather information, check your newspaper of choice.",
+            "You can find weather information here: https://meteo.hr/"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"jokes",
+         "patterns":[
+            "Tell me a joke",
+            "Do you know any jokes?",
+            "Say something funny!",
+            "Do you know any funny jokes?",
+            "Can you tell jokes?"
+         ],
+         "responses":[
+            "What is the best thing about Switzerland? I don't know, but the flag is a big plus.",
+            "I invented a new word! Plagiarism!",
+            "Hear about the new restaurant called Karma? There's no menu: You get what you deserve.",
+            "Did you hear about the actor who fell through the floorboards? He was just going through a stage.",
+            "I met a Dutch girl with inflatable shoes last week, phoned her up to arrange a date but unfortunately she'd popped her clogs.  ",
+            "So I said 'Do you want a game of Darts?' He said, 'OK then', I said nearest to bull starts'. He said, 'Baa', I said, 'Moo', he said, You're closest'.  ",
+            "The other day I sent my girlfriend a huge pile of snow. I rang her up; I said 'Did you get my drift?'  ",
+            "So I went down the local supermarket, I said, 'I want to make a complaint, this vinegar's got lumps in it', he said, 'Those are pickled onions'.  ",
+            "I saw this bloke chatting up a cheetah; I thought, 'He's trying to pull a fast one'.  ",
+            "So I said to this train driver 'I want to go to Paris'. He said 'Eurostar?' I said, 'I've been on telly but I'm no Dean Martin'.  ",
+            "I said to the Gym instructor 'Can you teach me to do the splits?' He said, 'How flexible are you?' I said, 'I can't make Tuesdays'.  ",
+            "But I'll tell you what I love doing more than anything: trying to pack myself in a small suitcase. I can hardly contain myself.  ",
+            "I went to the Chinese restaurant and this duck came up to me with a red rose and says 'Your eyes sparkle like diamonds'. I said, 'Waiter, I asked for a-ROMATIC duck'.  ",
+            "So this bloke says to me, 'Can I come in your house and talk about your carpets?' I thought, 'That's all I need, a Je-hoover's witness'.  ",
+            "I rang up British Telecom, I said, 'I want to report a nuisance caller', he said 'Not you again'.  ",
+            "I was having dinner with a world chess champion and there was a check tablecloth. It took him two hours to pass me the salt.  ",
+            "He said, 'You remind me of a pepper-pot', I said 'I'll take that as a condiment'.  ",
+            "I was in the supermarket and I saw this man and woman wrapped in a barcode. I said, 'Are you two an item?'  ",
+            "A lorry-load of tortoises crashed into a trainload of terrapins, I thought, 'That's a turtle disaster'.  ",
+            "Four fonts walk into a bar the barman says 'Oi - get out! We don't want your type in here'  ",
+            "A three-legged dog walks into a saloon in the Old West. He slides up to the bar and announces: 'I'm looking for the man who shot my paw.'  ",
+            "Two antennas meet on a roof, fall in love and get married. The ceremony wasn't much, but the reception was excellent.",
+            "Two hydrogen atoms walk into a bar. One says, 'I've lost my electron.' The other says, 'Are you sure?' The first replies, 'Yes, I'm positive...'",
+            "A jumper cable walks into a bar. The bartender says,  'I'll serve you but don't start anything.'",
+            "A sandwich walks into a bar. The bartender  says, 'Sorry we don't serve food in here.'",
+            "A man walks into a bar with a slab of asphalt under his arm and says: 'A beer please, and one for the road.'",
+            "Two cannibals are eating a clown. One says to  the other: 'Does this taste funny to you?'",
+            "'Doc, I can't stop singing 'The Green, Green Grass of Home.'' 'That sounds like Tom Jones Syndrome.' 'Is it common?' 'It's Not Unusual.'",
+            "Two cows standing next to each other in a field. Daisy says to Dolly, 'I was artificially inseminated this morning.' 'I don't believe you', said Dolly. 'It's true, no bull!' exclaimed Daisy.",
+            "An invisible man marries an invisible woman. The kids were nothing to look at either.",
+            "I went to buy some camouflage trousers the other day but I couldn't find any.",
+            "I went to the butcher's the other day to bet him 50 bucks that he couldn't reach the meat off the top shelf. He said, 'No, the steaks are too high.'",
+            "I went to a seafood disco last week and pulled a mussel.",
+            "A man goes into a bar and says, 'Can I have a bottle of less?' 'What's that?', asks the barman, 'Is it the name of a beer?' 'I don't know', replies the man, 'but my doctor says I have to drink it.'",
+            "A man returns from an exotic holiday and is feeling very ill. He goes to see his doctor, and is immediately rushed to the hospital to undergo some tests. The man wakes up after the tests in a private room at the hospital, and the phone by his bed rings. 'This is your doctor. We have the results back from your tests and we have found you have an extremely nasty disease called M.A.D.S. It's a combination of Measles, AIDS, Diphtheria, and Shingles!'  'Oh my gosh', cried the man, 'What are you going to do, doctor?'  'Well we're going to put you on a diet of pizzas, pancakes, and pita bread.' replied the doctor.  'Will that cure me?' asked the man.  The doctor replied, 'Well no, but, it's the only food we can slide under the door.'",
+            "A man strolls into a lingerie shop and asks the assistant: 'Do you have a see-through negligee, size 46-48-52?' The assistant looks bewildered. 'What the heck would you want to see through that for?'!",
+            "Did you hear about the Buddhist who refused the offer of Novocain during his root canal work? He wanted to transcend dental medication.",
+            "Pete goes for a job on a building site as an odd-job man. The foreman asks him what he can do. 'I can do anything' says Pete. 'Can you make tea?' asks the foreman. 'Sure, yes', replies Pete. 'I can make a great cup of tea.' 'Can you drive a forklift?' asks the foreman, 'Good grief!' replies Pete. 'How big is the teapot?'",
+            "Stevie Wonder got a cheese grater for his birthday. He said it was the most violent book he'd ever read.",
+            "A man is stopped by an angry neighbour. 'I'd just left the house this morning to collect my newspaper when that evil Doberman of yours went for me!' 'I'm astounded', said the dog's owner. 'I've been feeding that fleabag for seven years and it's never got the paper for me.'",
+            "A man visits his doctor: 'Doc, I think I'm losing it', he says',I'm forever dreaming I wrote Lord Of The Rings.' 'Hmm. One moment', replies the doctor, consulting his medical book. 'Ah yes, now I see... you've been Tolkien in your sleep.'",
+            "A police officer on a motorcycle pulls alongside a man driving around the M25 in an open-topped sports car and flags him down. The policeman solemnly approaches the car. 'Sir, I'm sorry to tell you your wife fell out a mile back', he says. 'Oh, thank goodness', the man replies. 'I thought I was going deaf.'",
+            "Two men walking their dogs pass each other in a graveyard. The first man says to the second, 'Morning.' 'No', says the second man. 'Just walking the dog.'",
+            "A brain went into a bar and said, 'Can I have a pint of lager please, mate?' 'No way', said the barman. 'You're already out of your head.'"
+         ],
+         "context":[
+            ""
+         ]
+      },
+      {
+         "tag":"love",
+         "patterns":[
+            "What is love?",
+            "Do you know how to love?",
+            "Are you capable of love?"
+         ],
+         "responses":[
+            "Baby, don't hurt me.",
+            "Love encompasses a range of strong and positive emotional and mental states.",
+            "Love is hard for chatbots to understand."
+         ],
+         "context":[
+            "search_blood_pressure_by_patient_id"
+         ]
+      },
+      {
+         "tag":"general_feelings",
+         "patterns":[
+            "Can you feel?",
+            "Can you feel pain?",
+            "How do you feel?",
+            "Do you have feelings?"
+         ],
+         "responses":[
+            "Feelings are chemical reactions in the brain. So, no."
+         ],
+         "context":[
+            ""
+         ]
+      }
    ]
 }
