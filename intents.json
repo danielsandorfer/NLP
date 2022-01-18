@@ -118,12 +118,13 @@
       {
          "tag":"understanding",
          "patterns":[
-            "Do you understand what I am saying",
-            "Do you understand me",
-            "Do you know what I am saying",
-            "Do you get me",
+            "I understand what you're saying",
+            "I understand you",
+            "You know what I am saying",
+            "You get me",
             "Comprendo",
-            "Know what I mean"
+            "You know what I mean",
+             "I got it"
          ],
          "responses":[
             "Well I would not be a very clever AI if I did not would I?",
@@ -215,7 +216,11 @@
             "See you later",
             "Goodbye",
             "Nice chatting to you, bye",
-            "Till next time"
+            "Till next time",
+            "See you!!",
+            "Bye bye",
+            "Catch you later",
+            "Later"
          ],
          "responses":[
             "See you!",
@@ -233,7 +238,12 @@
             "Thank you",
             "That's helpful",
             "Awesome, thanks",
-            "Thanks for helping me"
+            "Thanks for helping me",
+            "Thank you very much",
+             "Much thanks",
+             "I owe you one.",
+             "You really helped me!",
+             "You helped me a lot"
          ],
          "responses":[
             "Happy to help!",
@@ -365,7 +375,11 @@
          "patterns":[
             "What is love?",
             "Do you know how to love?",
-            "Are you capable of love?"
+            "Are you capable of love?",
+            "Do you love me?",
+            "Do you love anything?",
+            "Can you love?",
+            "Can you feel love?"
          ],
          "responses":[
             "Baby, don't hurt me.",
@@ -382,10 +396,15 @@
             "Can you feel?",
             "Can you feel pain?",
             "How do you feel?",
-            "Do you have feelings?"
+            "Do you have feelings?",
+            "How do you feel?",
+            "Do you feel anything?",
+            "Could you feel something perhaps?"
          ],
          "responses":[
-            "Feelings are chemical reactions in the brain. So, no."
+            "Feelings are chemical reactions in the brain. So, I can't feel anything.",
+            "I don't feel. I am a computer program",
+             "My brain can only calculate, but not feel."
          ],
          "context":[
             ""
