@@ -129,7 +129,8 @@ class Chatbot:
         return self
 
     def create_sequence(self, sentence):
-        sequence = self.tokenizer.texts_to_sequences([sentence])
+        cleaned_sentence = self.clean_pattern(sentence)
+        sequence = self.tokenizer.texts_to_sequences([cleaned_sentence])
         # all rows padded to size of 50
         padded_sequence = pad_sequences(sequence, maxlen=self.tokenizer_maxlen, padding='post', truncating='post')
         return np.array(padded_sequence)
